@@ -2,5 +2,5 @@
 ### 该工程用来创建ChAMP的工作镜像  
 **Usage:**  
 ```
-cd Dockfile && docker build .
+cd Dockfile && docker build -t="ChAMP:v1" .
 ```
