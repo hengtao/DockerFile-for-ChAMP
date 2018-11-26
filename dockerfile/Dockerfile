@@ -10,4 +10,6 @@ RUN Rscript -e 'install.packages("BiocManager",repos="https://mirrors.shu.edu.cn
 
 RUN Rscript -e 'BiocManager::install("ensembldb", version = "3.8")' -e BiocManager::install("goseq") -e BiocManager::install("TxDb.Hsapiens.UCSC.hg19.knownGene") -e BiocManager::install(c('biovizBase', 'FDb.InfiniumMethylation.hg19', 'Gviz', 'methylumi', 'lumi', 'IlluminaHuilmn12.hg19', 'geneLenDataBase', 'DMRcate', 'IlluminaHumanMethylationEPICmanifest', 'globaltest', 'IlluminaHumanMethylation450kmanifest')) -e BiocManager::install(c("wateRmelon","IlluminaHumanMethylationEPICanno.ilm10b2.hg19"))
 
-RUN Rscript -e BiocManager::install('wateRmelon') -e BiocManager::install('ChAMP')
+RUN Rscript -e BiocManager::install('wateRmelon') -e BiocManager::install('ChAMP') -e "install.packages("getopt",repos="https://mirrors.shu.edu.cn/CRAN")"
+## INSTALL PYTHON3 and Neccessary modules
+Run yum install -y python34 python34-pip && yum clean all && pip3 install pyyaml  
