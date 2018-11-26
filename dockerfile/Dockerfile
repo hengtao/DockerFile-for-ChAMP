@@ -12,4 +12,4 @@ RUN Rscript -e 'BiocManager::install("ensembldb", version = "3.8")' -e BiocManag
 
 RUN Rscript -e BiocManager::install('wateRmelon') -e BiocManager::install('ChAMP') -e "install.packages("getopt",repos="https://mirrors.shu.edu.cn/CRAN")"
 ## INSTALL PYTHON3 and Neccessary modules
-Run yum install -y python34 python34-pip && yum clean all && pip3 install pyyaml  
+RUN yum install -y python34 python34-pip && yum clean all && pip3 install pyyaml  
